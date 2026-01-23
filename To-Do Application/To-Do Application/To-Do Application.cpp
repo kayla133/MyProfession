@@ -87,13 +87,13 @@ int main() {
 	
 	// this line reads what the user types.
 
-	while (choice != 3) {
+	while (choice != 4) {
 		cout << "1. Add Task \n";
 		cout << "2. Mark Task as Complete \n";
 		cout << "3. List Task \n";
 		//cout << "4. Save to File \n";
 		//cout << "5. Load File \n";
-		cout << "3. Quit Program \n";
+		cout << "4. Quit Program \n";
 		cin >> choice;
 		system("cls");
 
@@ -120,7 +120,7 @@ int main() {
 			// load lsit
 		}
 
-		if (choice == 6) {
+		if (choice == 4) {
 			// quit
 			cout << "See ya later!";
 		}

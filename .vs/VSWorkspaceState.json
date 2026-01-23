@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\To-Do Application"
+    "\\To-Do Application",
+    "\\To-Do Application\\To-Do Application"
   ],
-  "SelectedNode": "\\To-Do Application\\To-Do Application.slnx",
+  "SelectedNode": "\\To-Do Application\\To-Do Application\\To-Do Application.cpp",
   "PreviewInSolutionExplorer": false
 }
