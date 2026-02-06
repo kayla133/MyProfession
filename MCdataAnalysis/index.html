@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>F1 Analysis</title>
+</head>
+<body>
+    <div class="container">
+        <h1>F1 Leaderboard Analysis</h1>
+        <button onclick="fetchF1Data()">Load Stats</button>
+        <div id="results">
+            </div>
+    </div>
+
+    <script>
+        async function fetchF1Data() {
+            const response = await fetch('/api/data');
+            const data = await response.json();
+            
+            let html = '<h3>Top 5 Teams:</h3><ul>';
+            for (const [team, wins] of Object.entries(data.teams)) {
+                html += `<li>${team}: ${wins} wins</li>`;
+            }
+            html += '</ul>';
+            
+            document.getElementById('results').innerHTML = html;
+        }
+    </script>
+</body>
+</html>

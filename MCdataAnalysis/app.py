@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 
 # --- PAGE SETUP ---
 st.set_page_config(page_title="F1 Data Analysis", layout="wide")
-st.title("🏎️ Formula 1 Race Analysis Dashboard")
+st.title("Formula 1 Race Analysis Dashboard")
 
 def load_and_clean_data():
     # Use st.cache_data so the file doesn't reload every time you click a button
-    df = pd.read_csv('MCdataAnalysis/f1_data.csv')
+    df = pd.read_csv('f1_data.csv')
     
     # removes weird characters or spaces.
     df['winner_name'] = df['winner_name'].str.replace('Â','').str.strip()
